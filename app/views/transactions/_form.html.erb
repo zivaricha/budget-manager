@@ -1,0 +1,6 @@
+<h1> this is a form</h1>
+<%= form_for @transaction do |f| %>
+  <%= f.select(:transaction_type, ["expense","income"]) %>
+  <%= f.number_field :amount, step: :any %>
+  <%= f.submit "Save transaction" %>
+<% end %>
