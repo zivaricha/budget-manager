@@ -1,0 +1,31 @@
+<div class="row">
+    <div class="col-sm-4 center income-sum">
+      Income: <%= Transaction.incomes %>
+    </div>
+  <div class="col-sm-4">
+  </div>
+    <div class="col-sm-4 center expenses-sum">
+      <p>Expenses: <%= Transaction.expenses %></p>
+    </div>
+</div>
+<table class="transactions-table">
+  <thead>
+    <tr>
+      <th>
+        Title
+      </th>
+      <th>
+        Amount
+      </th>
+      <th>
+        Category
+      </th>
+      <th>
+        Date
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <%= render @transactions %>
+  </tbody>
+</table>

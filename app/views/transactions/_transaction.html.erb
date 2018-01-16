@@ -1,0 +1,14 @@
+<tr>
+  <td>
+    <%= transaction.title %>
+  </td>
+  <td>
+    <%= "-" if transaction.expense? %><%= transaction.amount %>
+  </td>
+  <td>
+    <%= transaction.category.title %>
+  </td>
+  <td>
+    <%= transaction.date %>
+  </td>
+</tr>

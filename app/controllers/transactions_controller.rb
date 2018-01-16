@@ -1,6 +1,11 @@
 class TransactionsController < ApplicationController
+  def index
+    @transactions = Transaction.all
+  end
+  
   def new
     @transaction = Transaction.new
+    @categories = Category.all.map {|c| [c.title, c.id]}
   end
   
   def create
@@ -17,6 +22,6 @@ class TransactionsController < ApplicationController
   private
   
   def transaction_params
-    params.require(:transaction).permit(:transaction_type, :amount)
+    params.require(:transaction).permit(:transaction_type, :amount, :title, :category_id, :date)
   end
 end
