@@ -4,7 +4,6 @@ class TransactionsController < ApplicationController
   end
   
   def create
-    debugger
     @transaction = Transaction.new(transaction_params)
     if @transaction.save
       flash[:notice] = "Transaction was saved succefully"
