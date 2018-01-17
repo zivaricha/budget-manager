@@ -1,8 +1,10 @@
 class TransactionsController < ApplicationController
   def index
     @transactions = Transaction.all
+    @income_sum = Transaction.incomes
+    @expenses_sum = Transaction.expenses
   end
-  
+    
   def new
     @transaction = Transaction.new
     @categories = Category.all.map {|c| [c.title, c.id]}
@@ -10,6 +12,7 @@ class TransactionsController < ApplicationController
   
   def create
     @transaction = Transaction.new(transaction_params)
+    @transaction.user = current_user if current_user.present?
     if @transaction.save
       flash[:notice] = "Transaction was saved succefully"
       redirect_to root_path

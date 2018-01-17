@@ -1,11 +1,12 @@
 <div class="row">
-    <div class="col-sm-4 center income-sum">
-      Income: <%= Transaction.incomes %>
+    <div class="col-xs-4 center income-sum">
+      Income: <%= @income_sum %>
     </div>
-  <div class="col-sm-4">
-  </div>
-    <div class="col-sm-4 center expenses-sum">
-      <p>Expenses: <%= Transaction.expenses %></p>
+    <div class="col-xs-4 center expenses-sum">
+      <p>Expenses: <%= @expenses_sum %></p>
+    </div>
+    <div class="col-xs-4 center balance">
+      <p>Balance: <%= @income_sum - @expenses_sum %></p>
     </div>
 </div>
 <table class="transactions-table">

@@ -1,3 +1,20 @@
+.navbar {
+  background-color: #001a4d;
+  color: white;
+}
+.navbar-default .navbar-brand {
+  color:white;
+}
+.navbar-default .navbar-nav>li>a {
+  color:white;
+}
+.navbar-right {
+  padding-top: 15px;
+}
+.nav>li>a {
+  color:white;
+}
+
 .transactions-table th, td{
   padding: 8px;  
 }
@@ -8,15 +25,17 @@
 
 .income-sum {
   background-color: green;
-  color: white;
 }
 
 .expenses-sum {
   background-color: red;
-  color: white;
 }
 
-.expenses-sum, .income-sum {
+.balance {
+  background-color: #001a4d;
+}
+.expenses-sum, .income-sum, .balance {
   padding: 15px 15px;
-  width: 50%;
+  color: white;
+  display: inline-block;
 }
